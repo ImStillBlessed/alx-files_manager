@@ -16,7 +16,6 @@ class DBClient {
           `MongoDB client not connected to the server: ${err.message}`
         );
       } else {
-        console.log('MongoDB client connected to the server');
         this.db = this.client.db(database);
       }
     });
