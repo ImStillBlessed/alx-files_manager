@@ -9,14 +9,18 @@
 > NodeJS |
 > Express JS |
 > Kue |
-___
 
- Weight: 1
- Project to be done in teams of 2 people (your team: Blessed Oigbochie)
- Project will start Jun 27, 2024 6:00 AM, must end by Jul 4, 2024 6:00 AM
- Checker was released at Jun 29, 2024 12:00 AM
- Manual QA review must be done (request it when you are done with the project)
- An auto review will be launched at the deadline
+> Weight: 1
+> 
+> Project to be done in teams of 2 people (your team: Blessed Oigbochie)
+>
+> Project will start Jun 27, 2024 6:00 AM, must end by Jul 4, 2024 6:00 AM
+> 
+> Checker was released at Jun 29, 2024 12:00 AM
+> 
+> Manual QA review must be done (request it when you are done with the project)
+> 
+> An auto review will be launched at the deadline
 ___
 _This project is a summary of this back-end trimester: authentication, NodeJS, MongoDB, Redis, pagination and background processing._
 
