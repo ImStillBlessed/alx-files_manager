@@ -1,27 +1,29 @@
 # 0x04. Files manager
 
-> Back-end | 
-> JavaScript | 
-> ES6 | 
-> NoSQL | 
-> MongoDB | 
-> Redis | 
+> Back-end |
+> JavaScript |
+> ES6 |
+> NoSQL |
+> MongoDB |
+> Redis |
 > NodeJS |
 > Express JS |
 > Kue |
 
+---
 > Weight: 1
-> 
+>
 > Project to be done in teams of 2 people (your team: Blessed Oigbochie)
 >
 > Project will start Jun 27, 2024 6:00 AM, must end by Jul 4, 2024 6:00 AM
-> 
+>
 > Checker was released at Jun 29, 2024 12:00 AM
-> 
+>
 > Manual QA review must be done (request it when you are done with the project)
-> 
+>
 > An auto review will be launched at the deadline
-___
+
+---
 _This project is a summary of this back-end trimester: authentication, NodeJS, MongoDB, Redis, pagination and background processing._
 
 **The objective is to build a simple platform to upload and view files:**
@@ -32,7 +34,8 @@ _This project is a summary of this back-end trimester: authentication, NodeJS, M
 4. **Change permission of a file**
 5. **View a file**
 6. **Generate thumbnails for images**
-___
+
+---
 
 **_You will be guided step by step for building it, but you have some freedoms of implementation, split in more files etc… (utils folder will be your friend)_**
 **_Of course, this kind of service already exists in the real life - it’s a learning purpose to assemble each piece and build a full product._**
@@ -42,7 +45,9 @@ ___
 ## Resources
 
 _Read or watch:_
-___
+
+---
+
 * Node JS getting started
 * Process API doc
 * Express getting started
@@ -57,7 +62,9 @@ ___
 ## Learning Objectives
 
 **_At the end of this project, you are expected to be able to explain to anyone, without the help of Google:_**
-___
+
+---
+
 * how to create an API with Express
 * how to authenticate a user
 * how to store data in MongoDB
