@@ -1,6 +1,6 @@
-const { v4: uuidv4 } = require('uuid');
 const sha1 = require('sha1');
-const dbClient = require('../utils/db');
+const dbClient = require('../utils/db').dbClient;
+const { ObjectId } = require('mongodb');
 const redisClient = require('../utils/redis');
 
 class UsersController {
@@ -47,7 +47,7 @@ class UsersController {
     }
     const usersCollection = dbClient.db.collection('users');
     const user = await usersCollection.findOne({
-      _id: dbClient.ObjectId(userId),
+      _id: new ObjectId(userId),
     });
     if (!user) {
       return res.status(401).send('Unauthorized');

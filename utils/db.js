@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { MongoClient, ObjectId } = require('mongodb');
 
 class DBClient {
   constructor() {
@@ -6,19 +6,15 @@ class DBClient {
     const port = process.env.DB_PORT || 27017;
     const database = process.env.DB_NAME || 'files_manager';
     const url = `mongodb://${host}:${port}`;
-    this.client = new MongoClient(url, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    this.client.connect((err) => {
-      if (err) {
-        console.error(
-          `MongoDB client not connected to the server: ${err.message}`
-        );
-      } else {
+    this.client = new MongoClient(url, { useUnifiedTopology: true });
+    this.client
+      .connect()
+      .then(() => {
         this.db = this.client.db(database);
-      }
-    });
+      })
+      .catch((err) => {
+        console.error('MongoDB connection error:', err);
+      });
   }
 
   isAlive() {
@@ -26,14 +22,19 @@ class DBClient {
   }
 
   async nbUsers() {
-    return this.db.collection('users').countDocuments();
+    const usersCollection = this.db.collection('users');
+    return usersCollection.countDocuments();
   }
 
   async nbFiles() {
-    return this.db.collection('files').countDocuments();
+    const filesCollection = this.db.collection('files');
+    return filesCollection.countDocuments();
   }
 }
 
 const dbClient = new DBClient();
 
-module.exports = dbClient;
+module.exports = {
+  dbClient,
+  ObjectId,
+};
