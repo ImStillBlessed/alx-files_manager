@@ -31,7 +31,7 @@ const injectRoutes = (api) => {
   api.all('*', (req, res, next) => {
     errorResponse(new APIError(404, `Cannot ${req.method} ${req.url}`), req, res, next);
   });
-  api.use(errorResponse);
+  // api.use(errorResponse);
 };
 
 export default injectRoutes;
